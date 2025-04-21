@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp \
-        vectordinamico.cpp
+        cadena.cpp \
+        main.cpp
 
 HEADERS += \
-    vectordinamico.h
+    cadena.h

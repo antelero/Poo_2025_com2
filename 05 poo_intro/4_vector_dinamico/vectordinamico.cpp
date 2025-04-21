@@ -1,91 +1,78 @@
 #include "vectordinamico.h"
-#include <iostream>
-using namespace std;
 
-int VectorDinamico::getSize() const{
-    return size;
+int VectorDinamico::getCant() const
+{
+    return cant;
 }
 
-VectorDinamico::VectorDinamico(int *vec, int size) : vec(vec), size(size){
-    this->size = size;
+void VectorDinamico::add(int dato)
+{
+    int * aux = new int[this->cant+1];
+    for(int i = 0; i < this->cant; i++){
+        aux[i] = this->vec[i];
+    }
+    aux[this->cant] = dato;
+    delete [] this->vec;
+    this->vec = aux;
+    this->cant++;
 }
 
-int VectorDinamico::find(int element){
-    bool flag = true;
-    int place = -1;
-    int index = 0;
-    while(index < size){
-        if(this->vec[index] == element){
-            place = index;
-            flag = false;
+void VectorDinamico::remove(int index)
+{
+    if (this->cant < index) {
+        return;
+    }
+
+    int * aux = new int[this->cant-1];
+    int j = 0;
+    for(int i = 0; i < this->cant; i++){
+        if (i != index) {
+            aux[j] = this->vec[i];
+            j++;
         }
-        index += 1;
     }
-    return place;
+    delete [] this->vec;
+    this->vec = aux;
+    this->cant--;
 }
 
-void VectorDinamico::add(int element){
-    if(this->size == 0)
-        this->vec[0] = element;
-    else{
-        int *aux = new int[this->size+1];
-        for(int i = 0; i < this->size; i++){
-            aux[i] = this->vec[i];
+int VectorDinamico::get(int index)
+{
+    return this->vec[index];
+}
+
+double VectorDinamico::promedio()
+{
+    double acu = 0;
+    for(int i = 0; i < this->cant; i++){
+        acu += this->vec[i];
+    }
+    return acu / this->cant;
+}
+
+int VectorDinamico::mayor()
+{
+    int m = vec[0];
+    for(int i = 1; i < this->cant; i++){
+        if (m < vec[i]) {
+            m = vec[i];
         }
-        aux[this->size] = element;
-        this->vec = aux;
-        //delete [] aux;
     }
-    this->size += 1;
+    return m;
 }
 
-void VectorDinamico::remove(int element){
-    int pos = find(element);
-    if(pos < size){
-        int *aux = new int[size-1];
-        for(int i = 0; i < pos; i++){
-            aux[i] = vec[i];
+int VectorDinamico::menor()
+{
+    int m = vec[0];
+    for(int i = 1; i < this->cant; i++){
+        if (m > vec[i]) {
+            m = vec[i];
         }
-        for(int i = pos+1; i < size; i++){
-            aux[i-1] = vec[i];
-        }
-        this->vec = &*aux;
-        this->size -=1;
-        //delete [] aux;
     }
+    return m;
 }
 
-float VectorDinamico::avg(){
-    float aux = 0;
-    for(int i = 0; i < this->size; i++){
-        aux += this->vec[i];
-    }
-    return float(aux/size);
-}
+VectorDinamico::VectorDinamico()
+{
 
-int VectorDinamico::max(){
-    int max = vec[0];
-    for(int i = 0; i < this->size; i++){
-        if(this->vec[i] > max)
-            max = this->vec[i];
-    }
-    return max;
-}
-
-int VectorDinamico::min(){
-    int min = vec[0];
-    for(int i = 0; i < this->size; i++){
-        if(this->vec[i] < min)
-            min = this->vec[i];
-    }
-    return min;
-}
-
-const string VectorDinamico::toString(){
-    string s = "";
-    for(int i = 0; i < this->size; i++){
-        s.append(to_string(this->vec[i]));
-        s.append(" ");
-    }
-    return s;
 }
