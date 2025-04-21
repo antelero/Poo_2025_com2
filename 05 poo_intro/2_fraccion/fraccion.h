@@ -1,6 +1,7 @@
 #ifndef FRACCION_H
 #define FRACCION_H
 #include <iostream>
+#include <cstring>
 
 class Fraccion
 {
@@ -18,7 +19,7 @@ public:
     Fraccion dividir(Fraccion f);
 
     double mostrarFraccion();
-    const std::string toString();
+    const char * toString();
 };
 
 #endif // FRACCION_H

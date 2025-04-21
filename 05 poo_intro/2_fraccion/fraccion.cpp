@@ -53,9 +53,9 @@ double Fraccion::mostrarFraccion()
    return ((double)this->nro / (double)this->denominador);
 }
 
-const std::string Fraccion::toString() {
-    std::string s = std::to_string(this->nro);
-    s.append("/");
-    s.append(std::to_string(this->denominador));
-    return s;
+//Cambie el uso de string
+const char * Fraccion::toString() {
+    static char buffer[20];
+    snprintf(buffer, sizeof(buffer), "%d/%d", this->nro, this->denominador);
+    return buffer;
 }
