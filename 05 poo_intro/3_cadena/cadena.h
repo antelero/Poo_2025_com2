@@ -4,11 +4,11 @@
 /*
 3. Realice una clase Cadena que permita representar una cadena cstring. La cadena debe
 permitir:
-a) Saber cuantos caracteres tiene la cadena
-b) Agregar un carácter al final
-c) Agregar un carácter al principio
-d) Remover la primera ocurrencia de un carácter pasado por parámetro.
-e) Retornar una cadena en mayúscula.
+    a) Saber cuantos caracteres tiene la cadena
+    b) Agregar un carácter al final
+    c) Agregar un carácter al principio
+    d) Remover la primera ocurrencia de un carácter pasado por parámetro.
+    e) Retornar una cadena en mayúscula.
 */
 
 class Cadena
@@ -23,7 +23,6 @@ public:
     char * addInicio(char caracter);
     char * delOcurrencia(char caracter);
     char * toUpper();
-
     char * getCadena();
 };
 
