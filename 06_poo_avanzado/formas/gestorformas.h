@@ -13,6 +13,7 @@ private:
 public:
     int getCantidad();
     Forma* getObjeto(int);
+
     void addForma(Forma * form);
 
     Gestorformas();

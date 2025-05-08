@@ -30,6 +30,7 @@ int main()
     cant = lis->getCantidad();
     Forma *frmPtr = 0;
     lis[0].getCantidad();
+
     for(int i=0;i<cant;i++){
         //cout <<  i << " " << lis->getObjeto(i)->area()<< endl;
         frmPtr = lis->getObjeto(i);

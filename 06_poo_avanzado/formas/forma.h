@@ -6,6 +6,7 @@ class Forma
 {
 public:
     Forma();
+
     virtual double area() = 0;
 };
 
