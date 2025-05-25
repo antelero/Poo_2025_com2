@@ -6,19 +6,20 @@
 
 class Persona {
 private:
-    std::string nombre;
+    char* nombre;
     int edad;
     int dni;
 public:
-    Persona(std::string nombre, int edad, int dni);
+    Persona(char* nombre, int edad, int dni);
 
-    //++ Preincremento
+    //Suma
     Persona& operator++();
 
     //++ Postincremento
     Persona operator++(int);
 
     void mostrar() const;
+    friend std::ostream& operator<<(std::ostream& os, const Persona& obj);
 };
 
 #endif // PERSONA_H
