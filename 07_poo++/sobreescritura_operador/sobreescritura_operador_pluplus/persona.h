@@ -18,6 +18,8 @@ public:
     //++ Postincremento
     Persona operator++(int);
 
+    friend bool operator==(const Persona& lhs, const Persona& rhs);
+
     void mostrar() const;
     friend std::ostream& operator<<(std::ostream& os, const Persona& obj);
 };

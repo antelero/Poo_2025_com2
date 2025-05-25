@@ -19,3 +19,12 @@ std::ostream& operator<<(std::ostream& os, const Persona& obj){
     os <<  obj.nombre << " DNI: " << obj.dni << ", Edad: " << obj.edad;
     return os;
 }
+
+
+bool operator==(const Persona& lhs, const Persona& rhs)
+{
+   if (lhs.dni == rhs.dni)
+        return true;
+   else
+       return false;
+}
