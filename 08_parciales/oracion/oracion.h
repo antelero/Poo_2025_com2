@@ -15,7 +15,7 @@ public:
     int getCantidad() const;
     int getCantLetras() const;
     char *getOracion() const;
-    //friend std::ostream& operator<<(std::ostream& os, const BODY& tag);
+
     friend ostream& operator<<(ostream& os, const Oracion& oraci);
 };
 
