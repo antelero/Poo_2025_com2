@@ -1,0 +1,15 @@
+1
+Juan Perez
+900
+2
+Ana Torres
+1200
+3
+Industria Metalurgica
+6000
+4
+Analia Juarez
+200
+5
+Empresa nn
+5000

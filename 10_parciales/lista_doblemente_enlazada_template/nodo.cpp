@@ -5,7 +5,8 @@ Nodo<T>::Nodo()
 {
 
 }
-template <typename T>
+
+template <class T>
 Nodo<T>::Nodo(T value) {
     this->dato = value;
     this->next = nullptr;

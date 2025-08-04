@@ -25,6 +25,7 @@ void SistemaDeCobro::agregarCliente(Cliente* cliente) {
     delete[] clientes;
     clientes = newClientes;
     clientes[size++] = cliente;
+
 }
 
 void SistemaDeCobro::ordenarClientesPorMonto() {

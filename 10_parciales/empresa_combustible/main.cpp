@@ -35,12 +35,16 @@ int main() {
     Cliente *pCli;
     int cantidad = sistema.getSize();
     std::cout << "Imprime Infromacion"<<std::endl;
+    sistema.ordenarClientesPorMonto();
     for(int i = 0; i < cantidad; i++) {
            pCli = sistema.getCliente(i);
            if (pCli) {
                std::cout << " Orden " << i << " ." << (*pCli) << std::endl;
            }
      };
+    std::cout << std::endl << " Clientes ordenados por Monto " << std::endl;
+
+    sistema.imprimirClientes();
    // sistema.guardarEnArchivoBinario("respaldo.bin");
 
     return 0;
