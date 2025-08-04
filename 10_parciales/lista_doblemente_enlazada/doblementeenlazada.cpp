@@ -1,30 +1,35 @@
 #include "doblementeenlazada.h"
 
-DoblementeEnlazada::DoblementeEnlazada(): head(nullptr), tail(nullptr), size(0) {}
+DoblementeEnlazada::DoblementeEnlazada() {
+    this->head = nullptr;
+    this->tail = nullptr;
+    this->size = 0;
+}
 
 // a. Saber cuántos elementos tiene.
 int DoblementeEnlazada::getSize() {
-    return size;
+    return this->size;
 }
 
 // b. Agregar un elemento.
-void DoblementeEnlazada::addElement(int value) {
+void DoblementeEnlazada::addElemento(int value) {
     Nodo* newNode = new Nodo(value);
-    if (head == nullptr) {
-        head = tail = newNode;
+    if (this->head == nullptr) {
+        this->head = newNode;
+        this->tail = newNode;
     } else {
-        tail->next = newNode;
-        newNode->prev = tail;
-        tail = newNode;
+        this->tail->next = newNode;
+        newNode->prev = this->tail;
+        this->tail = newNode;
     }
-    size++;
+    this->size++;
 }
 
 // c. Imprimir la lista del primero al último.
     void DoblementeEnlazada::impPrimeroUltimo() {
-        Nodo* current = head;
+        Nodo* current = this->head;
         while (current != nullptr) {
-            std::cout << current->data << " ";
+            std::cout << current->dato << " ";
             current = current->next;
         }
         std::cout << std::endl;
@@ -32,9 +37,9 @@ void DoblementeEnlazada::addElement(int value) {
 
     // d. Imprimir la lista del último al primero.
     void DoblementeEnlazada::impUltimoPrimero() {
-        Nodo* current = tail;
+        Nodo* current = this->tail;
         while (current != nullptr) {
-            std::cout << current->data << " ";
+            std::cout << current->dato << " ";
             current = current->prev;
         }
         std::cout << std::endl;

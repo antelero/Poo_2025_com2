@@ -9,8 +9,7 @@ class SistemaDeCobro {
 private:
     Cliente** clientes;
     int size;
-    int capacity;
-    void expandCapacity();
+
 
 public:
     SistemaDeCobro();
@@ -18,7 +17,7 @@ public:
     void agregarCliente(Cliente* cliente);
     void ordenarClientesPorMonto();
     void imprimirClientes();
-    void guardarEnArchivoBinario(const char* filename);
+    //void guardarEnArchivoBinario(const char* filename);
     int getSize() const;
     Cliente *getCliente(int index) const;
 };

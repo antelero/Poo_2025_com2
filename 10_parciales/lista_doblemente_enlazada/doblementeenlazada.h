@@ -9,12 +9,10 @@ private:
     Nodo* head;
     Nodo* tail;
     int size;
-
-
 public:
     DoblementeEnlazada();
     int getSize();
-    void addElement(int value);
+    void addElemento(int value);
     void impPrimeroUltimo();
     void impUltimoPrimero();
 };

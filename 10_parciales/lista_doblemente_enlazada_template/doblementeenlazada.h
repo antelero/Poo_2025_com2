@@ -13,7 +13,7 @@ private:
 public:
     DoblementeEnlazada();
     int getSize();
-    void addElement(T value);
+    void addElemento(T value);
     void impPrimeroUltimo();
     void impUltimoPrimero();
 };

@@ -1,6 +1,8 @@
-#include "Cliente.h"
+#include "cliente.h"
 
-Cliente::Cliente(int id, const char* nombre, int litrosConsumidos) : id(id), litrosConsumidos(litrosConsumidos) {
+Cliente::Cliente(int id, const char* nombre, int litrosConsumidos) {
+    this->id = id;
+    this->litrosConsumidos = litrosConsumidos;
     strncpy(this->nombre, nombre, 250);
     this->nombre[249] = '\0'; // Asegurarse de que el nombre esté terminado en '\0'
 }

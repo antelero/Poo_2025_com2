@@ -1,65 +1,57 @@
 #include "vectordinamico.h"
 
-
 template<typename T>
-void VectorDinamico<T>::redimensionar(int nuevaCapacidad) {
-    T* nuevosDatos = new T[nuevaCapacidad];
-    for (int i = 0; i < cantidad; ++i) {
-        nuevosDatos[i] = datos[i];
-    }
-    delete[] datos;
-    datos = nuevosDatos;
-    capacidad = nuevaCapacidad;
-}
-
-template<typename T>
-VectorDinamico<T>::VectorDinamico() : capacidad(10), cantidad(0) {
-    datos = new T[capacidad];
+VectorDinamico<T>::VectorDinamico() {
+    this->cantidad = 0;
+    this->datos = new T[1];
 }
 
 template<typename T>
 VectorDinamico<T>::~VectorDinamico() {
-    delete[] datos;
+    delete[] this->datos;
 }
 
 template<typename T>
 void VectorDinamico<T>::agregar(const T &elemento) {
-    if (cantidad == capacidad) {
-        redimensionar(capacidad * 2);
+    T* nuevosDatos = new T[cantidad + 1];
+    for (int i = 0; i < cantidad; ++i) {
+        nuevosDatos[i] = datos[i];
     }
-    datos[cantidad++] = elemento;
+    delete[] this->datos;
+    this->datos = nuevosDatos;
+    this->datos[this->cantidad++] = elemento;
 }
 
 template<typename T>
 T VectorDinamico<T>::obtener(int indice) const {
-    if (indice < 0 || indice >= cantidad) {
-        throw std::out_of_range("Índice fuera de rango");
+    if (indice < 0 || indice >= this->cantidad) {
+        throw std::out_of_range("Indice fuera de rango");
     }
-    return datos[indice];
+    return this->datos[indice];
 }
 
 template<typename T>
 void VectorDinamico<T>::eliminarTodas(const T &elemento) {
     int j = 0;
-    for (int i = 0; i < cantidad; ++i) {
-        if (!(datos[i] == elemento)) {
-            datos[j++] = datos[i];
+    for (int i = 0; i < this->cantidad; ++i) {
+        if (!(this->datos[i] == elemento)) {
+            this->datos[j++] = this->datos[i];
         }
     }
-    cantidad = j;
+    this->cantidad = j;
 }
 
 template<typename T>
 int VectorDinamico<T>::size() const {
-    return cantidad;
+    return this->cantidad;
 }
 
 template<typename T>
 const T &VectorDinamico<T>::operator[](int i) const {
-    return datos[i];
+    return this->datos[i];
 }
 
 template<typename T>
 T &VectorDinamico<T>::operator[](int i) {
-    return datos[i];
+    return this->datos[i];
 }

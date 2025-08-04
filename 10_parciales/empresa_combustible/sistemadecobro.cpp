@@ -1,7 +1,8 @@
 #include "sistemadecobro.h"
 
-SistemaDeCobro::SistemaDeCobro() : size(0), capacity(1) {
-    clientes = new Cliente*[capacity];
+SistemaDeCobro::SistemaDeCobro()  {
+    this->size = 0;
+    clientes = new Cliente*[1];
 }
 
 SistemaDeCobro::~SistemaDeCobro() {
@@ -16,20 +17,13 @@ int SistemaDeCobro::getSize() const
     return size;
 }
 
-void SistemaDeCobro::expandCapacity() {
-    capacity += 1; // Incrementar de a uno
-    Cliente** newClientes = new Cliente*[capacity];
+void SistemaDeCobro::agregarCliente(Cliente* cliente) {
+    Cliente** newClientes = new Cliente*[size+1];
     for (int i = 0; i < size; ++i) {
         newClientes[i] = clientes[i];
     }
     delete[] clientes;
     clientes = newClientes;
-}
-
-void SistemaDeCobro::agregarCliente(Cliente* cliente) {
-    if (size == capacity) {
-        expandCapacity();
-    }
     clientes[size++] = cliente;
 }
 
@@ -53,6 +47,7 @@ void SistemaDeCobro::imprimirClientes() {
     }
 }
 
+/*
 void SistemaDeCobro::guardarEnArchivoBinario(const char* filename) {
     std::ofstream file(filename, std::ios::binary);
     for (int i = 0; i < size; ++i) {
@@ -60,7 +55,7 @@ void SistemaDeCobro::guardarEnArchivoBinario(const char* filename) {
     }
     file.close();
 }
-
+*/
 Cliente* SistemaDeCobro::getCliente(int index) const {
         if (index < 0 || index >= this->size) return nullptr;
         return clientes[index];

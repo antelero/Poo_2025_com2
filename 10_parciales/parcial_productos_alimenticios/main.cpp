@@ -5,6 +5,29 @@
 #include "vectordinamico.h"
 
 int main() {
+    VectorDinamico<int> ints;
+
+    ints.agregar(1);
+    ints.agregar(1);
+    ints.agregar(3);
+    ints.agregar(5);
+    ints.agregar(4);
+    //Imprime
+    for (int i = 0; i < ints.size(); ++i) {
+        std::cout << ints[i] << " ";
+    }
+    std::cout << std::endl;
+
+    ints.eliminarTodas(1);  // Elimina todos los 1
+    //Imprime
+    for (int i = 0; i < ints.size(); ++i) {
+        std::cout << ints[i] << " ";
+    }
+    // Salida: 3 5 4
+    std::cout << std::endl;
+    system("pause");
+
+
     VectorDinamico<Producto*> productos;
 
     // Galletitas Sonrisas
@@ -30,7 +53,7 @@ int main() {
     bolsa->agregarProducto(boca_dama);
     productos.agregar(bolsa);
 
-    ProductoSimple * anillos = new ProductoSimple("P001", "Galletitas anillos de colores");
+    ProductoSimple * anillos = new ProductoSimple("P004", "Galletitas anillos de colores");
     anillos->agregarIngrediente("Harina");
     anillos->agregarIngrediente("Azucar");
     anillos->agregarIngrediente("Leche");
@@ -42,6 +65,8 @@ int main() {
     for (int i = 0; i < productos.size(); ++i) {
         std::cout << *productos[i] << "\n";
     }
+
+
     std::cout << "Fin" << "\n";
 
 

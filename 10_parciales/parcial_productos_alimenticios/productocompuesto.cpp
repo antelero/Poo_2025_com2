@@ -22,7 +22,7 @@ VectorDinamico<std::string> ProductoCompuesto::getIngredientes() const {
 void ProductoCompuesto::imprimir(std::ostream &os) const {
     os << "Producto compuesto: " << nombre << " (codigo: " << codigo << ")\n";
     VectorDinamico<std::string> ings = getIngredientes();
-    os << "Producto simple"<<"\n";
+    os << "Productos simples"<<"\n";
     for (int i = 0; i < subproductos.size(); ++i) {
         os << "  " << subproductos[i]->getNombre()<<"\n";
     }

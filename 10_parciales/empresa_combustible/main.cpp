@@ -1,7 +1,7 @@
-#include "SistemaDeCobro.h"
-#include "ClientePequeno.h"
-#include "ClienteMediano.h"
-#include "ClienteExtra.h"
+#include "sistemadecobro.h"
+#include "clientepequeno.h"
+#include "clientemediano.h"
+#include "clienteextra.h"
 #include <fstream>
 
 Cliente* crearCliente(int id, const char* nombre, int litrosConsumidos) {
@@ -30,12 +30,11 @@ int main() {
         Cliente* cliente = crearCliente(id, nombre, litrosConsumidos);
         sistema.agregarCliente(cliente);
     }
-
     infile.close();
-    Cliente *pCli;
 
+    Cliente *pCli;
     int cantidad = sistema.getSize();
-    std::cout << "imprime"<<std::endl;
+    std::cout << "Imprime Infromacion"<<std::endl;
     for(int i = 0; i < cantidad; i++) {
            pCli = sistema.getCliente(i);
            if (pCli) {

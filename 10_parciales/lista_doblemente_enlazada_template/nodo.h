@@ -2,17 +2,16 @@
 #define NODO_H
 
 
-template <typename T>
+template <class T>
 class Nodo
 {
+private:
 public:
+    T dato;
     Nodo();
-
-    T data;
+    Nodo(T value);
     Nodo* next;
     Nodo* prev;
-
-    Nodo(T value);
 };
 
 #endif // NODO_H

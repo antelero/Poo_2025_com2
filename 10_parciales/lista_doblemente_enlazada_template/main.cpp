@@ -6,10 +6,10 @@ using namespace std;
 int main()
 {
     DoblementeEnlazada<int> deint;
-    deint.addElement(5);
-    deint.addElement(10);
-    deint.addElement(15);
-    deint.addElement(20);
+    deint.addElemento(5);
+    deint.addElemento(10);
+    deint.addElemento(15);
+    deint.addElemento(20);
 
     std::cout << "Elementos: " << deint.getSize() << std::endl;
 
@@ -20,10 +20,10 @@ int main()
     deint.impUltimoPrimero();
 
     DoblementeEnlazada<char> dechar;
-    dechar.addElement('a');
-    dechar.addElement('b');
-    dechar.addElement('c');
-    dechar.addElement('d');
+    dechar.addElemento('a');
+    dechar.addElemento('b');
+    dechar.addElemento('c');
+    dechar.addElemento('d');
 
     std::cout << "Elementos: " << dechar.getSize() << std::endl;
 

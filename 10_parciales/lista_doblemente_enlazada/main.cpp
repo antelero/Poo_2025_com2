@@ -6,10 +6,10 @@ using namespace std;
 int main()
 {
     DoblementeEnlazada dl;
-    dl.addElement(5);
-    dl.addElement(10);
-    dl.addElement(15);
-    dl.addElement(20);
+    dl.addElemento(5);
+    dl.addElemento(10);
+    dl.addElemento(15);
+    dl.addElemento(20);
 
     std::cout << "Elementos: " << dl.getSize() << std::endl;
 

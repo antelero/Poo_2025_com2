@@ -7,7 +7,7 @@ class Nodo
 public:
     Nodo();
 
-    int data;
+    int dato;
     Nodo* next;
     Nodo* prev;
 

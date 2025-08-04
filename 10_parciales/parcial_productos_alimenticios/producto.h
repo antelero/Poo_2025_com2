@@ -25,6 +25,7 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const Producto& p);
 
     virtual bool esCompuesto() const = 0;
+    bool operator==(const Producto& otro) const;
 };
 
 #endif
