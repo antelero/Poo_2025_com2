@@ -42,9 +42,7 @@ int main() {
                std::cout << " Orden " << i << " ." << (*pCli) << std::endl;
            }
      };
-    std::cout << std::endl << " Clientes ordenados por Monto " << std::endl;
 
-    sistema.imprimirClientes();
    // sistema.guardarEnArchivoBinario("respaldo.bin");
 
     return 0;
