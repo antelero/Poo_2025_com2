@@ -31,14 +31,23 @@ void cortar(char* nombre, int cant){
                 if ((currentLine % n) == 0) {
                     if (nroArchivo > 0)
                         destino.close();
+                    //Con string
+                    /*
                     std::string sstm = nombre;
                     sstm +=std::to_string(nroArchivo);
-
-
                     // Mostrar el resultado
                     std::cout << sstm <<  std::endl;
 
                     destino.open(sstm.c_str());
+               */
+                    //Con cstring
+                    //const char* nombre = "archivo";  // prefijo del nombre
+                    char sstm[256];  // buffer suficiente
+                    std::sprintf(sstm, "%s%d", nombre, nroArchivo);
+                    // Mostrar el resultado
+                    std::cout << sstm << std::endl;
+                    destino.open(sstm);
+
                     nroArchivo++;
                 }
                 destino << line << endl;
