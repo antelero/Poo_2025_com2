@@ -26,6 +26,7 @@ int main()
         cout << vec[i]<< " ";
     cout << endl;
     //De inicio a fin
+
     for (auto it = vec.begin();it != vec.end(); ++it) {
         std::cout << *it << " "; // Dereference the iterator to access the
     };
