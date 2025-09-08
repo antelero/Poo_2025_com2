@@ -99,6 +99,7 @@ int main()
     curso->limpiar();
     cout << "Cantidad luego de limpiar: "<< curso->getCantidad() << endl;
     curso->leerTxtObj();
+    curso->ordenar('A');
     cout << "Cantidad luego de leer: "<< curso->getCantidad() << endl;
     for(int i=0;i<curso->getCantidad();i++){
         gPtr = (curso->getAlumno(i));
