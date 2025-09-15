@@ -1,0 +1,14 @@
+Se nos pide desarrollar un programa para gestionar una serie de productos, donde cada
+producto posee los atributos nombre y precio, y existen dos tipos:
+perecederos, que incluyen además el atributo días_a_caducar,
+y no perecederos, que incluyen un atributo tipo. El programa debe implementar una función
+para calcular que reciba como parámetro la cantidad de productos y devuelva el precio total;
+en la clase Producto, simplemente se multiplicará el precio por la cantidad, en
+Perecedero se aplicará además una reducción del precio según los días a caducar
+(si queda un día, el precio se reduce cuatro veces; si quedan dos días, se reduce tres veces;
+si quedan tres días, se reduce dos veces), y en NoPerecedero se calcula igual que en Producto.
+Mostrar el precio total de vender cinco unidades de cada producto.
+
+Clase Producto (base) con nombre, precio y método calcular(int cantidad).
+    Clase Perecedero que extiende Producto y añade dias_a_caducar.
+    Clase NoPerecedero que extiende Producto y añade tipo.
