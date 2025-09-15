@@ -4,11 +4,15 @@ Producto::Producto(string n, double p)  {
     nombre= n;
     precio = p;
 }
-Producto::~Producto() {}
+
+Producto::~Producto() {
+
+}
 
 string Producto::getNombre() const {
     return nombre;
 }
+
 double Producto::getPrecio() const {
     return precio;
 }
