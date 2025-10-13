@@ -113,13 +113,14 @@ void Gestor::conteoPorTipo()
 
     for (auto p : productos) {
         string tipo;
-        if (dynamic_cast<Perecedero*>(p)) tipo = "Perecedero";
+        if (dynamic_cast<Perecedero*>(p))
+            tipo = "Perecedero";
         else tipo = "No Perecedero";
 
         conteoPorTipo[tipo]++; // incrementa el contador
     }
 
-    cout << "Cantidad de productos por tipo:" << endl;
+    cout << "Productos por tipo:" << endl;
     for (auto& par : conteoPorTipo) {
         cout << par.first << ": " << par.second << endl;
     }
