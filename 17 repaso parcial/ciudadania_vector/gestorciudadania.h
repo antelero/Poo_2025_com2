@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+
 struct strPersona
 {
 char dni[20];
@@ -12,6 +13,7 @@ char nombre[200];
 char apellido[200];
 char nacionalidad[200];
 };
+
 class GestorCiudadania
 {
 private:

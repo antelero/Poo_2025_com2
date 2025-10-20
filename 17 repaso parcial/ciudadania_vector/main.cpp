@@ -61,7 +61,7 @@ int main() {
     /*
      * Varios arboles
     */
-    /*
+
     //Ejemplo 1: Persona con 2 abuelos italianos
     Persona* abueloPaterno_ej1 = new Persona("1111", "Antonio", "Ferrari", "Italiana");
     Persona* abuelaPaterna_ej1 = new Persona("1112", "Claudia", "Moretti", "Italiana");
@@ -102,7 +102,7 @@ int main() {
     Persona* madre_ej3 = new Persona("9090", "Maru", "Perez", "Argentina");
     madre_ej3->setPadre(abueloMaterno_ej3);
 
-    Persona* padre_ej3 = new Persona("8989", "Ctristian", "Martinez", "Argentina");
+    Persona* padre_ej3 = new Persona("8989", "Cristian", "Martinez", "Argentina");
 
     Persona* persona_ej3 = new Persona("9898", "Marta", "Martinez", "Argentina");
     persona_ej3->setPadre(padre_ej3);
@@ -120,6 +120,6 @@ int main() {
     std::cout << std::endl;
     // Liberar memoria
     for (Persona* p : {persona, persona_ej1, persona_ej2}) delete p;
-*/
+
     return 0;
 }
