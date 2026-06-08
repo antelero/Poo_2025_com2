@@ -63,7 +63,5 @@ int main()
         } else {
             cout << "La palabra no existe en el vector." << endl;
         }
-
-
     return 0;
 }
