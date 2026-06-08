@@ -58,6 +58,5 @@ void SistemaDeCobro::guardarEnArchivoBinario(const char* filename) {
 }
 */
 Cliente* SistemaDeCobro::getCliente(int index) const {
-        if (index < 0 || index >= this->size) return nullptr;
-        return clientes[index];
-    }
+       return clientes[index];
+}

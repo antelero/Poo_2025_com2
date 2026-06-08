@@ -5,7 +5,7 @@
 #include <cstring>
 
 class Cliente {
-protected:
+private:
     int id;
     char nombre[250];
     int litrosConsumidos;

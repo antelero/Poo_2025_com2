@@ -1,7 +1,7 @@
 #ifndef SISTEMADECOBRO_H
 #define SISTEMADECOBRO_H
 
-#include "Cliente.h"
+#include "cliente.h"
 #include <iostream>
 #include <fstream>
 
