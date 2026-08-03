@@ -7,12 +7,11 @@ VinoEspecial::VinoEspecial(int nro, int cantidad_litros, int anio_produccion): V
 
 }
 
-int VinoEspecial::getLtsVenta(int anio)
-{
-    return (anio - anio_produccion >= 2) ? cantidad_litros : 0;
+int VinoEspecial::getLtsVenta(int anio) const {
+    return (anio - anio_produccion >= 3) ? cantidad_litros : 0;
 }
 
-double VinoEspecial::getMntVenta(int anio)
+double VinoEspecial::getMntVenta(int anio) const
 {
     return getLtsVenta(anio) * 320.0;
 }

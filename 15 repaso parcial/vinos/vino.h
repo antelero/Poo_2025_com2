@@ -25,8 +25,8 @@ protected:
 public:    
     Vino(int nro, char tipo, int cantidad_litros, int anio_produccion);
 
-    virtual int getLtsVenta(int anio) = 0;
-    virtual double getMntVenta(int anio) = 0;
+    virtual int getLtsVenta(int anio) const = 0;         // const
+    virtual double getMntVenta(int anio) const = 0;      // const
 
     int getAnioProduccion()  {
         return anio_produccion;

@@ -4,12 +4,12 @@ VinoMesa::VinoMesa(int nro, int cantidad_litros, int anio_produccion): Vino(nro,
 {
 
 }
-
-int VinoMesa::getLtsVenta(int anio)  {
-        return (anio - cantidad_litros >= 1) ? cantidad_litros : 0;
+int VinoMesa::getLtsVenta(int anio) const {
+    return (anio - anio_produccion >= 1) ? cantidad_litros : 0;
 }
 
-double VinoMesa::getMntVenta(int anio)  {
+
+double VinoMesa::getMntVenta(int anio)  const{
         return getLtsVenta(anio) * 120.0;
 }
 

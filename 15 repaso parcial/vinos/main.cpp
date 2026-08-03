@@ -6,13 +6,12 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
     Gestor *ges = new Gestor();
     //ges->generarBinVinos();
     ges->cargarVinosDesdeArchivo("vinos.bin");
 
     //Levanto datos de prueba
-   // ges->generarVinosDummy();
+    ges->generarVinosDummy();
 
     cout << "Tamano " <<ges->getSize()<< std::endl;
 

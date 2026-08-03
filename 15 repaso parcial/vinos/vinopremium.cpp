@@ -6,12 +6,12 @@ VinoPremium::VinoPremium(int nro, int cantidad_litros, int anio_produccion):Vino
 
 }
 
-int VinoPremium::getLtsVenta(int anio)
+int VinoPremium::getLtsVenta(int anio) const
 {
     return (anio - anio_produccion >= 2) ? cantidad_litros : 0;
 }
 
-double VinoPremium::getMntVenta(int anio)
+double VinoPremium::getMntVenta(int anio)const
 {
     return getLtsVenta(anio) * 200.0;
 
