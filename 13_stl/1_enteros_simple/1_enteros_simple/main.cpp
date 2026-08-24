@@ -15,7 +15,9 @@ int main()
     cout << "Genero 200 elementos al azar"<< endl;
     for(int i = 0; i < 200; ++i){
         enteros.push_back(rand()%100);
+        cout << enteros[i] << " ";
     }
+    cout << endl;
     cout << "Imprimo los elementos al azar"<< endl;
     std::random_shuffle(enteros.begin(), enteros.end());
     for(int i=0; i< enteros.size(); i++)
