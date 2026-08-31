@@ -13,7 +13,7 @@ class Agenda
 private:
    // Antes: std::vector<Persona> agenda;
    // Ahora: map indexado por telefono (clave = std::string, valor = Persona)
-   // Esto ordena automaticamente por telefono y permite busqueda O(log n) por telefono.
+   // Esto ordena automaticamente por telefono y permite busqueda por telefono.
    std::map<std::string, Persona> agenda;
 public:
     Agenda();

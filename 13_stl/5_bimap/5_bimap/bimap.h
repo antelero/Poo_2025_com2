@@ -15,7 +15,7 @@ public:
     K clave(V valor);
     V valor(K clave);
     std::map<K,V> getClaveValor();
-    //friend std::ostream& operator <<(std::ostream& os, const Bimap<K,V>& obj);
+    friend std::ostream& operator <<(std::ostream& os, const Bimap<K,V>& obj);
 };
 
 #endif // BIMAP_H

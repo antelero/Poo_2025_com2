@@ -31,14 +31,19 @@ int main()
     char * numero= "0343-1111";
 
     cout << "Buscar por telefono" << endl;
+
+    cout<< endl;
+    cout << "Buscar por telefono "<< endl;
     Persona p = agenda.getPersXTelefono(numero);
-    p = agenda.getPersXTelefono("0343-2222");
-    p = agenda.getPersXTelefono("0343-1133");
-    p = agenda.getPersXTelefono2("0343-1177");
-    cout << "Buscar por nmobre" << endl;
-    p = agenda.getPersXNombre("Roberto Sanchez");
-    p = agenda.getPersXNombre2("Aquiles Canto");
-    p = agenda.getPersXNombre2("Firulais");
+    Persona p1 = agenda.getPersXTelefono("0343-2222");
+    Persona p2 = agenda.getPersXTelefono("0343-1133");
+    Persona p3 = agenda.getPersXTelefono2("0343-1177");
+
+    cout<< endl;
+    cout << "Buscar por nombre " << endl;
+    Persona p4 = agenda.getPersXNombre("Roberto Sanchez");
+    Persona p5 = agenda.getPersXNombre2("Aquiles Canto");
+    Persona p6 = agenda.getPersXNombre2("Firulais");
     cout << endl;
 
     return 0;

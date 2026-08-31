@@ -29,32 +29,32 @@ Persona Agenda::listarXNom()
 {
     std::sort(agenda.begin(), agenda.end(),
               []( Persona& p1,  Persona& p2) {
-                          return strcmp(p1.getNombre(), p2.getNombre()) < 0;
-                      });
+        return strcmp(p1.getNombre(), p2.getNombre()) < 0;
+    });
     for (int i=0; i<agenda.size(); ++i)
         std::cout << agenda[i] << std::endl;
 
 };
 
-Persona Agenda::getPersXTelefono(char *numero)
+Persona Agenda::getPersXTelefono2(char *numero)
 {
     auto it = std::find_if(
-                            this->agenda.begin(),
-                            this->agenda.end(),
-                            [&numero](Persona p1) -> bool {return (strcmp(p1.getTelefono(), numero) == 0); }
+                this->agenda.begin(),
+                this->agenda.end(),
+                [&numero](Persona p1) -> bool {return (strcmp(p1.getTelefono(), numero) == 0); }
             );
-            if (it != agenda.end())
-            {
-                std::cout << "Si, ese numero existe en la agenda y es " << *it <<std::endl;
-            }
-            else
-            {
-                std::cout << "No, ese numero "<< numero <<" no existe en la agenda" <<std::endl;
-            }
+    if (it != agenda.end())
+    {
+        std::cout << "Si, ese numero existe en la agenda y es " << *it <<std::endl;
+    }
+    else
+    {
+        std::cout << "No, ese numero "<< numero <<" no existe en la agenda" <<std::endl;
+    }
 
 }
 
-Persona Agenda::getPersXTelefono2(char *numero)
+Persona Agenda::getPersXTelefono(char *numero)
 {
     for (int i=0; i<agenda.size(); ++i)
     {
@@ -65,24 +65,26 @@ Persona Agenda::getPersXTelefono2(char *numero)
         }
     }
 
+
 }
 
 
 Persona Agenda::getPersXNombre2(char *nombre)
 {
+    //find_if( iterator start, iterator end, function condition );
     auto it = std::find_if(
-                            this->agenda.begin(),
-                            this->agenda.end(),
-                            [&nombre](Persona p1) -> bool {return (strcmp(p1.getNombre(), nombre) == 0); }
+                this->agenda.begin(),
+                this->agenda.end(),
+                [&nombre](Persona p1) -> bool {return (strcmp(p1.getNombre(), nombre) == 0); }
             );
-            if (it != agenda.end())
-            {
-                std::cout << "Si, ese nombre existe en la agenda y es " << *it <<std::endl;
-            }
-            else
-            {
-                std::cout << "No, ese nombre "<< nombre <<" no existe en la agenda" <<std::endl;
-            }
+    if (it != agenda.end())
+    {
+        std::cout << "Si, ese nombre existe en la agenda y es " << *it <<std::endl;
+    }
+    else
+    {
+        std::cout << "No, ese nombre "<< nombre <<" no existe en la agenda" <<std::endl;
+    }
 
 }
 

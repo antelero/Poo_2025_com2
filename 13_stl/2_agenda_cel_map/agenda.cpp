@@ -13,7 +13,11 @@ void Agenda::insertar(Persona persona) {
     // La clave del map es el telefono. insert() no requiere que Persona
     // tenga constructor por defecto (a diferencia de agenda[clave] = persona).
     std::string clave = persona.getTelefono();
-    this->agenda.insert(std::make_pair(clave, persona));
+    //lista de inicialización
+    this->agenda.insert({persona.getTelefono(), persona});
+    //this->agenda.insert(std::make_pair(clave, persona));
+    //Si la clave es el teléfono de la persona, también:
+    //this->agenda.emplace(persona.getTelefono(), persona);
 }
 
 void Agenda::listarXTel()
@@ -75,7 +79,8 @@ Persona Agenda::getPersXTelefono2(char *numero)
 
 Persona Agenda::getPersXNombre2(char *nombre)
 {
-    // El nombre no es la clave del map, asi que sigue siendo busqueda lineal
+    // El nombre no es la clave del map, asi que sigue
+    // siendo busqueda lineal
     auto it = std::find_if(
                             this->agenda.begin(),
                             this->agenda.end(),

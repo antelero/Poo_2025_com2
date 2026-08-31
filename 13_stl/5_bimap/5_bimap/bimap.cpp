@@ -1,5 +1,10 @@
 #include "bimap.h"
 
+
+    //Un Bimap mantiene dos mapas sincronizados:
+        //claveValor: va de clave → valor.
+        //valorClave: va de valor → clave.
+
 template <class K, class V>
 Bimap<K,V>::Bimap()
 {
