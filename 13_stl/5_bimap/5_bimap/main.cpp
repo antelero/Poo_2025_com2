@@ -19,7 +19,7 @@ int main()
     cout << "Imprime valores: " << endl;
     cout << bimap<< endl;
     cout <<  "Valor de 32 " << bimap.clave(32) << endl;
-    cout << "clave de z " << bimap.valor('a') << endl<< endl<< endl;
+    cout << "clave de a " << bimap.valor('a') << endl<< endl<< endl;
     cout << "Imprime valores: " << endl;
     cout << bimap;
     return 0;
